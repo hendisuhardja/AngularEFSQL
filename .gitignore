@@ -1,0 +1,29 @@
+/.vs
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# System Files
+.DS_Store
+Thumbs.db
+/TurnkeyIO.Banking.ConsumerApi/obj/Debug/netcoreapp3.0/TurnkeyIO.Banking.ConsumerApi.assets.cache
+/TurnkeyIO.Banking.ConsumerApi/obj/Debug/netcoreapp3.0/TurnkeyIO.Banking.ConsumerApi.csprojAssemblyReference.cache
+/TurnkeyIO.Banking.ConsumerApi/obj/project.assets.json
+/TurnkeyIO.Banking.ConsumerApi/obj/TurnkeyIO.Banking.ConsumerApi.csproj.nuget.cache
+/TurnkeyIO.Banking.ConsumerApi/obj/TurnkeyIO.Banking.ConsumerApi.csproj.nuget.dgspec.json
+/TurnkeyIO.Banking.ConsumerApi/obj/TurnkeyIO.Banking.ConsumerApi.csproj.nuget.g.props
