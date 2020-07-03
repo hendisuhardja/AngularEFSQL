@@ -1,0 +1,21 @@
+<h1>Customer Form</h1>
+<form #f="ngForm" (ngSubmit)="submit()" novalidate>
+ 
+  <div class="form-group"><label for="firstName">First Name</label>
+    <input id="firstName" type="text" class="form-control" [(ngModel)]="customer.firstName" 
+        name="firstName" #firstName="ngModel" required>
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">Please specify First Name</div>
+  </div>
+  <div class="form-group"><label for="lastName">Last Name</label>
+    <input id="lastName" type="text" class="form-control" [(ngModel)]="customer.lastName" 
+        name="lastName" #lastName="ngModel" required>
+      <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Please specify Last Name</div>
+  </div>
+  <div class="form-group"><label for="address">Address</label>
+    <input id="address" type="text" class="form-control" [(ngModel)]="customer.address" 
+        name="address" #address="ngModel" required>
+      <div class="alert alert-danger" *ngIf="address.touched && !address.valid">Please specify Address</div>
+  </div>
+  <button class="btn btn-primary" [disabled]="!f.valid">Save</button>
+  <button class="btn btn-danger" *ngIf="this.customer.id" type="button" (click)="delete()">Delete</button>
+</form>

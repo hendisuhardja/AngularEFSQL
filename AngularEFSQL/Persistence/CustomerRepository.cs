@@ -74,16 +74,16 @@ namespace AngularEFSQL.Persistence
         private IQueryable<Customer> ApplyFiltering(CustomerQuery queryObj, IQueryable<Customer> query)
         {
             if (!string.IsNullOrEmpty(queryObj.Address))
-                query = query.Where(v => v.Address.Trim().ToLower() == queryObj.Address.Trim().ToLower());
+                query = query.Where(v => v.Address.Trim().ToLower().Contains(queryObj.Address.Trim().ToLower()));
 
             if (queryObj.CustomerId.HasValue)
                 query = query.Where(v => v.CustomerId == queryObj.CustomerId.Value);
 
             if (!string.IsNullOrEmpty(queryObj.FirstName))
-                query = query.Where(v => v.FirstName.Trim().ToLower() == queryObj.FirstName.Trim().ToLower());
+                query = query.Where(v => v.FirstName.Trim().ToLower().Contains(queryObj.FirstName.Trim().ToLower()));
 
             if (!string.IsNullOrEmpty(queryObj.LastName))
-                query = query.Where(v => v.LastName.Trim().ToLower() == queryObj.LastName.Trim().ToLower());
+                query = query.Where(v => v.LastName.Trim().ToLower().Contains(queryObj.LastName.Trim().ToLower()));
 
             return query;
         }
